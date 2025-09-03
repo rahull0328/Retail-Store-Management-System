@@ -1,3 +1,9 @@
+-- Step 1: Rolling back to the savepoint
+
 ROLLBACK TO S1;
 
-SELECT SUM(total_amount) as 'total_revenue' from orders;
+-- Step 2: Finding the sum for total_revenue generated from all orders
+
+SELECT SUM(total_amount) 
+AS 'total_revenue' 
+FROM orders;
